@@ -1,0 +1,67 @@
+.main-page{
+    height: 100%;
+    width: 100%;
+    background-color: #181818;
+    top:0px;
+}
+.grid-component{
+    width: 1596px;
+     display: grid; 
+     grid-template-columns: auto auto auto;
+       gap:20px 10px;
+      	;
+}
+.main-component{
+    width:100% ; 
+    display: flex; 
+    justify-content: 
+    center; 
+    margin-top: 60px;
+    margin-bottom: 100px;
+    cursor: pointer;
+
+}
+:host ::ng-deep .card{
+   width:  450px;
+height: 450px;
+background-color: #282828	;
+border-radius: 14px ;
+
+}
+
+:host ::ng-deep .card-img-top{
+width: 100%;
+height: 225px;
+gap: 0px;
+border-radius: 14px 14px 0px 0px;
+opacity: 0px;
+
+
+}
+:host ::ng-deep .card-body{
+    width:384px;
+height: 225px;
+padding: 22px 25px 22px 25px;
+gap: 20px;
+border-radius: 0px 0px 14px 14px;
+border: 0px 1px 1px 1px;
+opacity: 0px;
+
+}
+.card-title{
+    font-size: 30px;
+    color: gray;
+    width: 600;
+    margin-top: 0px;
+}
+.card-description{
+    font-size: 16px;
+}
+:host ::ng-deep .btn-primary{
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: green;
+    width: 150px;
+    font-size: 16px;
+    color: black;
+}

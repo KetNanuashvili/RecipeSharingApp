@@ -1,0 +1,16 @@
+<div class="main-page">
+    <div class="main-component">
+        <div class="grid-component">
+          <div class="card" *ngFor="let recipe of recipes">
+            <img src="{{ recipe.image}}" class="card-img-top" alt="..." />
+            <div class="card-body">
+             <h5 class="card-title"> {{recipe.title}}</h5> 
+             <p class="card-description">{{recipe.description}}</p>
+    
+             <button class="btn btn-primary" type="submit">Button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</div>
