@@ -26,6 +26,9 @@ export class MainPageListOfRecipeComponent implements OnInit{
     // });
   }
 
+
+ 
+
   viewRecipe(id: number): void {
     this.router.navigate(['/recipeDetail', id]); 
   }

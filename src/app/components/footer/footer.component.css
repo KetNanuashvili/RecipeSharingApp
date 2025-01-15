@@ -1,0 +1,24 @@
+:host ::ng-deep .card-body{
+    display: flex; 
+    justify-content: center;
+}
+:host ::ng-deep .blockquote{
+    display: flex; 
+    justify-content: space-between;
+}
+span svg {
+    font-size: 30px;
+}
+.bi{
+    color:white;
+}
+p{
+    color: gray;
+}
+hr{
+    color: green;
+}
+.card{
+    margin-top: -5px;
+    background-color: #282828;
+}

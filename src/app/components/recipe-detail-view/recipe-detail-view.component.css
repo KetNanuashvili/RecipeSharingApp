@@ -2,8 +2,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
-    background-color: #181818;
+    padding-top: 150px;
+        background-color: #181818;
+       padding-bottom: 70px;
 }
 .Card-style{
     background-color: #282828;
