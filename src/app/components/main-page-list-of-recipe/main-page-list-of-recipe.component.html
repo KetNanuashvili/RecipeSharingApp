@@ -1,4 +1,4 @@
-<div class="main-page">
+<div class="main-page" >
 
   <div class="bottom-div" >
     <div class="bottom-header">
@@ -29,7 +29,7 @@
               <!-- add listing  -->
               <div class="btn-group">
                 
-                <button class="btn  button-texts listing-styles text-color-list" type="button" data-bs-auto-close="false" aria-expanded="false">
+                <button   class="btn  button-texts listing-styles text-color-list" type="button" data-bs-auto-close="false" aria-expanded="false">
                     +
                   Add Recipe
                 </button>
@@ -44,14 +44,14 @@
 
 
     <div class="main-component">
-        <div class="grid-component">
+        <div class="grid-component" >
           <div class="card" *ngFor="let recipe of recipes">
             <img src="{{ recipe.image}}" class="card-img-top" alt="..." />
             <div class="card-body">
              <h5 class="card-title"> {{recipe.title}}</h5> 
              <p class="card-description">{{recipe.description}}</p>
     
-             <button class="btn primary" type="submit">View More</button>
+             <button (click)="viewRecipe(recipe.id)" class="btn primary" type="submit">View More</button>
             </div>
           </div>
         </div>

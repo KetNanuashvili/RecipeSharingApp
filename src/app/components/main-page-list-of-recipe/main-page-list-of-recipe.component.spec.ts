@@ -21,3 +21,4 @@ describe('MainPageListOfRecipeComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+ng g 

@@ -1,16 +1,23 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { MainPageListOfRecipeComponent } from './components/main-page-list-of-recipe/main-page-list-of-recipe.component';
-import { RecipesService } from './services/recipes.service';
+import { RecipeDetailViewComponent } from './components/recipe-detail-view/recipe-detail-view.component';
 import { HeaderComponent } from './components/header/header.component';
+import { RecipesService } from './services/recipes.service';
+import { routes } from './app.routes';
 
 @Component({
   selector: 'app-root',
-  imports: [ MainPageListOfRecipeComponent, HeaderComponent],
+  standalone: true,
+  imports: [
+    RouterModule,
+    MainPageListOfRecipeComponent,
+    RecipeDetailViewComponent,
+    HeaderComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],
   providers: [RecipesService],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent {
   title = 'my-angular-app';
