@@ -3,12 +3,14 @@
     width: 100%;
     background-color: #181818;
     top:0px;
+    margin-top: 50px;
+    padding-bottom: 100px;
 }
 .grid-component{
     width: 1596px;
      display: grid; 
-     grid-template-columns: auto auto auto;
-       gap:20px 10px;
+     grid-template-columns: auto auto auto auto;
+       gap:30px 10px;
       	;
 }
 .main-component{
@@ -22,7 +24,7 @@
 
 }
 :host ::ng-deep .card{
-   width:  450px;
+   width:  384px;
 height: 450px;
 background-color: #282828	;
 border-radius: 14px ;
@@ -57,11 +59,55 @@ opacity: 0px;
 .card-description{
     font-size: 16px;
 }
-:host ::ng-deep .btn-primary{
+.primary{
+    
     margin-top: 20px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     background-color: green;
     width: 150px;
     font-size: 16px;
     color: black;
+}
+
+
+.bottom-div{
+    display: flex;
+    justify-content: center;
+}
+.bottom-header{
+    width: 1596px;
+    margin-top: 77px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-main-looking{
+   
+    width: 785px;
+    padding: 6px;
+border-radius: 10px;
+opacity: 0px;
+border: 1px solid #DBDBDB;
+display: flex;
+justify-content: space-around;
+
+}
+.button-texts{
+    font-family: FiraGO;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
+       color: green;
+
+}
+.bi-search{
+    margin-left: 10px;
+}
+.text-color-list{
+    color: white;
+    background-color: green;
+    width: 200px;
+    right: 20px;
+
 }

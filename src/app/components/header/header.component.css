@@ -1,6 +1,17 @@
 .header-style {
     background-color: #282828	; 
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    position: fixed; /* ფიქსირებული პოზიცია */
+    top: 0; /* გვერდის ზედა ნაწილში */
+    left: 0; /* მარცხენა მხარეს */
+    width: 100%; /* მოიცავს მთელ სიგანეს */
+    background-color: #282828; /* ფონის ფერი */
+    padding: 10px; /* შიდა ველი */
+    text-align: left; /* ტექსტის ცენტრში განლაგება */
+    z-index: 1000; /* ფენის პრიორიტეტი */
   }
-  
+  h1{
+    color: green;
+    margin-left: 100px;
+  }
