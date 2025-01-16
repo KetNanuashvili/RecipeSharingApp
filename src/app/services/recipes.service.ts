@@ -125,6 +125,47 @@ export class RecipesService {
         ],
         image: 'burger.jpg',
       },
+      {
+        id: 7,
+        title: 'Chocolate Cake',
+        description: 'A moist and rich chocolate cake that melts in your mouth.',
+        ingredients: [
+          '1 cup all-purpose flour',
+          '1 cup sugar',
+          '1/2 cup cocoa powder',
+          '1 tsp baking powder',
+          '2 large eggs',
+        ],
+        instructions: [
+          'Preheat oven to 350°F (175°C).',
+          'Mix flour, sugar, cocoa powder, and baking powder in a bowl.',
+          'Add eggs and mix until smooth.',
+          'Pour batter into a greased baking pan and bake for 30-35 minutes.',
+          'Let the cake cool before serving.',
+        ],
+        image: 'burger.jpg',
+      },
+      {
+        id: 8,
+        title: 'Chocolate Cake',
+        description: 'A moist and rich chocolate cake that melts in your mouth.',
+        ingredients: [
+          '1 cup all-purpose flour',
+          '1 cup sugar',
+          '1/2 cup cocoa powder',
+          '1 tsp baking powder',
+          '2 large eggs',
+        ],
+        instructions: [
+          'Preheat oven to 350°F (175°C).',
+          'Mix flour, sugar, cocoa powder, and baking powder in a bowl.',
+          'Add eggs and mix until smooth.',
+          'Pour batter into a greased baking pan and bake for 30-35 minutes.',
+          'Let the cake cool before serving.',
+        ],
+        image: 'burger.jpg',
+      },
+      
     ];
 
     constructor(){
