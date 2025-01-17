@@ -8,7 +8,6 @@ import { RecipesService } from './services/recipes.service';
 import { routes } from './app.routes';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddNewCardFormComponent } from './components/add-new-card-form/add-new-card-form.component';
-// import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroupServiceService } from './services/form-group-service.service';
@@ -25,10 +24,9 @@ import { CommonModule } from '@angular/common';
     HeaderComponent,
     FooterComponent,
     AddNewCardFormComponent,
-    // BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

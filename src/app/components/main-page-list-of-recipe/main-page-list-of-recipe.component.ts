@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecipesService } from '../../services/recipes.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { FormGroupServiceService } from '../../services/form-group-service.service';
 
 @Component({
   selector: 'app-main-page-list-of-recipe',
@@ -13,11 +14,12 @@ import { Router } from '@angular/router';
 export class MainPageListOfRecipeComponent implements OnInit{
   recipes: any [] =[];
 
-  constructor(private RecipesService : RecipesService, private router: Router){
+  constructor(private formGroupService: FormGroupServiceService, private RecipesService : RecipesService, private router: Router){
 
   }
 
   ngOnInit(){
+    
     this.recipes= this.RecipesService.getRecipes();
     console.log(this.recipes);
     

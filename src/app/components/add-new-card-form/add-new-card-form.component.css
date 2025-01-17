@@ -63,12 +63,12 @@ input{
   width: 400px;
   padding: 20px;
   background-color: gray;
-  border:none;
+  border: green solid 2px;
 }
 textarea {
   width: 400px;
   background-color: gray;
-  border: none;
+  border: green solid 2px;
 }
 
 
@@ -126,4 +126,19 @@ label{
   border: none;
   margin-right:10px;
 cursor: pointer;
+}
+.btn-secondary{
+  background-color: gray;
+}
+.invalid-feedback {
+  color: red;
+  display: block;
+}
+
+.form-control.ng-touched.ng-invalid {
+  border-color: red;
+}
+
+.form-control.ng-touched.ng-valid {
+  border-color: green;
 }

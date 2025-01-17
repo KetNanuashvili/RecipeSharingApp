@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FormGroupServiceService } from '../../services/form-group-service.service';
-import { Router } from 'express';
-import { ActivatedRoute } from '@angular/router';
+
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-new-card-form',
@@ -15,8 +15,10 @@ import { ActivatedRoute } from '@angular/router';
 export class AddNewCardFormComponent implements OnInit {
   recipeForm!: FormGroup;
 
-
-  constructor(private formGroupService: FormGroupServiceService,  private router: Router,  private route: ActivatedRoute,) {}
+  constructor(
+    private formGroupService: FormGroupServiceService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.recipeForm = this.formGroupService.createRecipeForm();
@@ -25,10 +27,11 @@ export class AddNewCardFormComponent implements OnInit {
   onSubmit(): void {
     if (this.recipeForm.valid) {
       console.log('Form Data:', this.recipeForm.value);
+      // You can send the form data to the backend here
     }
   }
 
-  closeNewCard(){
-    
+  closeNewCard(): void {
+    this.router.navigate(['mainPage']);
   }
 }
