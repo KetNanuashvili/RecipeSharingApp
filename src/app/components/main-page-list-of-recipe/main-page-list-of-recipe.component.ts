@@ -1,38 +1,51 @@
 import { Component, OnInit } from '@angular/core';
-import { RecipesService } from '../../services/recipes.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { FormGroupServiceService } from '../../services/form-group-service.service';
+import { RecipeService } from '../../services/recipes.service';
 
 @Component({
   selector: 'app-main-page-list-of-recipe',
   standalone: true,
-  imports: [CommonModule ],
+  imports: [CommonModule],
   templateUrl: './main-page-list-of-recipe.component.html',
-  styleUrl: './main-page-list-of-recipe.component.css'
+  styleUrls: ['./main-page-list-of-recipe.component.css']
 })
-export class MainPageListOfRecipeComponent implements OnInit{
-  recipes: any [] =[];
+export class MainPageListOfRecipeComponent implements OnInit {
+  recipes: any[] = [];
 
-  constructor(private formGroupService: FormGroupServiceService, private RecipesService : RecipesService, private router: Router){
+  constructor(private recipeService: RecipeService, private router: Router) {}
 
+  ngOnInit(): void {
+    this.getRecipes();
   }
 
-  ngOnInit(){
-    
-    this.recipes= this.RecipesService.getRecipes();
-    console.log(this.recipes);
-    
-    // this.recipes.forEach(element => {
-    //   console.log(element);
-    // });
+  getRecipes(): void {
+    this.recipeService.getRecipes().subscribe((data) => {
+      this.recipes = data;
+      console.log(data);
+    });
   }
 
+  // Navigate to the RecipeDetailViewComponent with the selected recipe's id
   viewRecipe(id: number): void {
-    this.router.navigate(['/recipeDetail', id]); 
+    this.router.navigate(['/recipe', id]);
+  }
+  
+
+  addRecipe(): void {
+    const newRecipe = {
+      name: 'ჩიზბურგერი',
+      ingredients: ['ხორცი', 'პურის ცომი', 'ჩიზი']
+    };
+
+    this.recipeService.addRecipe(newRecipe).subscribe((data) => {
+      this.recipes.push(data);
+    });
   }
 
-  addNewCard(): void{
-    this.router.navigate(['cardForm']);
+  deleteRecipe(id: number): void {
+    this.recipeService.deleteRecipe(id).subscribe(() => {
+      this.recipes = this.recipes.filter((recipe) => recipe.id !== id);
+    });
   }
 }

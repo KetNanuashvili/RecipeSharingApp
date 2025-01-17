@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { FormGroupServiceService } from '../../services/form-group-service.service';
 
 import { ActivatedRoute, Router } from '@angular/router';
+import { RecipeService } from '../../services/recipes.service';
+
 
 @Component({
   selector: 'app-add-new-card-form',
@@ -17,7 +19,8 @@ export class AddNewCardFormComponent implements OnInit {
 
   constructor(
     private formGroupService: FormGroupServiceService,
-    private router: Router
+    private router: Router,
+    private recipeService: RecipeService
   ) {}
 
   ngOnInit(): void {

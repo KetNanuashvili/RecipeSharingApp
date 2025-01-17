@@ -6,6 +6,6 @@ import { AddNewCardFormComponent } from './components/add-new-card-form/add-new-
 export const routes: Routes = [
   { path: '', redirectTo: '/mainPage', pathMatch: 'full' },
   { path: 'mainPage', component: MainPageListOfRecipeComponent },
-  { path: 'recipeDetail/:id', component: RecipeDetailViewComponent },
+  { path: 'recipe/:id', component: RecipeDetailViewComponent },
   {path: 'cardForm',component:  AddNewCardFormComponent},
 ];

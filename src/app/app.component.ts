@@ -4,7 +4,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { MainPageListOfRecipeComponent } from './components/main-page-list-of-recipe/main-page-list-of-recipe.component';
 import { RecipeDetailViewComponent } from './components/recipe-detail-view/recipe-detail-view.component';
 import { HeaderComponent } from './components/header/header.component';
-import { RecipesService } from './services/recipes.service';
+import { RecipeService } from './services/recipes.service';
 import { routes } from './app.routes';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddNewCardFormComponent } from './components/add-new-card-form/add-new-card-form.component';
@@ -30,7 +30,7 @@ import { CommonModule } from '@angular/common';
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [RecipesService,FormGroupServiceService ],
+  providers: [RecipeService,FormGroupServiceService ],
 })
 export class AppComponent {
   title = 'my-angular-app';
