@@ -94,7 +94,6 @@ justify-content: space-around;
 
 }
 .button-texts{
-    font-family: FiraGO;
     font-size: 16px;
     font-weight: 600;
     line-height: 19.2px;
@@ -112,3 +111,31 @@ justify-content: space-around;
     right: 20px;
 
 }
+.filter-input{
+    background-color:#181818;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
+       color: green;
+       width: 200px;
+       cursor: pointer;
+}
+input::placeholder {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
+       color: green;
+  }
+  
+.bi-search{
+    color: green;
+}
+/* წაშალეთ საზღვარი ფოკუსირებაზე */
+input:focus {
+    border: none; /* გააუქმეთ საზღვარი */
+    outline: none; /* ასევე გააუქმეთ outline, რომელიც ხშირად გამოჩნდება */
+  }
+  

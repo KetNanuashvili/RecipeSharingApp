@@ -38,10 +38,11 @@ export class RecipeService {
     return this.http.post<any>(this.apiUrl, recipe).pipe(
       catchError(error => {
         console.error('Error adding recipe', error);
-        return of(null);  // Return null or handle the error as needed
+        return of(null);  // შეცდომის შემთხვევაში შეიძლება null ან ცარიელი მნიშვნელობა დაბრუნდეს
       })
     );
   }
+  
 
   // რეცეპტის რედაქტირება
   updateRecipe(id: number, recipe: any): Observable<any> {

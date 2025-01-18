@@ -3,25 +3,36 @@
   <div class="bottom-div" >
     <div class="bottom-header">
         <!-- left dropdown div  -->
-        <div class="dropdown-main-looking">
-            <div class="btn-group">
-                <button class="btn   button-texts"   type="button" data-bs-auto-close="true" aria-expanded="false"  >
-                    Title Filter   <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                    </svg> </button>
-               
-                
-              </div>
-              
-              <div class="btn-group">
-                <button class="btn   button-texts"   type="button" data-bs-auto-close="inside" aria-expanded="false" >
-                  Ingredients Filter  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                  </svg>
-                </button>
-              </div>
-              
-
+        <form class="dropdown-main-looking" >
+          <div class="btn-group">
+            <input class="filter-input" type="text" placeholder="Title Filter" formControlName="title">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg>
+            </span>
+          </div>
+        
+          <div class="btn-group">
+            <input class="filter-input" type="text" placeholder="Recipe Filter" formControlName="ingredients">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg>
+            </span>
+          </div>
+        </form>
+        
+        <!-- <div *ngFor="let recipe of filteredRecipes">
+          <div>{{ recipe.name }}</div>
+          <div>{{ recipe.ingredients.join(', ') }}</div>
+        </div> -->
+        
+        <div >
+          <div class="recipe-item">
+            <!-- <h3>{{ recipe.title }}</h3>
+            <p>{{ recipe.ingredients }}</p> -->
+          </div>
         </div>
     
       <!-- right divs -->
@@ -29,7 +40,7 @@
               <!-- add listing  -->
               <div class="btn-group">
                 
-                <button  class="btn  button-texts listing-styles text-color-list" type="button" data-bs-auto-close="false" aria-expanded="false">
+                <button (click)="addNewRecipe()"  class="btn  button-texts listing-styles text-color-list" type="button" data-bs-auto-close="false" aria-expanded="false">
                     +
                   Add Recipe
                 </button>
@@ -46,7 +57,7 @@
     <div class="main-component">
         <div class="grid-component" >
           <div class="card" *ngFor="let recipe of recipes">
-            <img src="{{ recipe.image}}" class="card-img-top" alt="..." />
+            <img *ngIf="recipe.image" [src]="recipe.image"  class="card-img-top" alt="..." />
             <div class="card-body">
              <h5 class="card-title"> {{recipe.title}}</h5> 
              <p class="card-description">{{recipe.description}}</p>

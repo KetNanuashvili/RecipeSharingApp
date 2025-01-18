@@ -8,10 +8,10 @@ import { RecipeService } from './services/recipes.service';
 import { routes } from './app.routes';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddNewCardFormComponent } from './components/add-new-card-form/add-new-card-form.component';
-import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroupServiceService } from './services/form-group-service.service';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +25,7 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     AddNewCardFormComponent,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule ,
     CommonModule,
   ],
   templateUrl: './app.component.html',

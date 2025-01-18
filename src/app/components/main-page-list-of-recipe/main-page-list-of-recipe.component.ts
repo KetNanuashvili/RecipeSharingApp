@@ -40,6 +40,7 @@ export class MainPageListOfRecipeComponent implements OnInit {
 
     this.recipeService.addRecipe(newRecipe).subscribe((data) => {
       this.recipes.push(data);
+  
     });
   }
 
@@ -47,5 +48,9 @@ export class MainPageListOfRecipeComponent implements OnInit {
     this.recipeService.deleteRecipe(id).subscribe(() => {
       this.recipes = this.recipes.filter((recipe) => recipe.id !== id);
     });
+  }
+
+  addNewRecipe(): void{
+    this.router.navigate(['/cardForm']);
   }
 }
