@@ -53,19 +53,18 @@
   
 </div>
 
-
-    <div class="main-component">
-        <div class="grid-component" >
-          <div class="card" *ngFor="let recipe of recipes">
-            <img *ngIf="recipe.image" [src]="recipe.image"  class="card-img-top" alt="..." />
-            <div class="card-body">
-             <h5 class="card-title"> {{recipe.title}}</h5> 
-             <p class="card-description">{{recipe.description}}</p>
-    
-             <button (click)="viewRecipe(recipe.id)" class="btn primary" type="submit">View More</button>
-            </div>
-          </div>
-        </div>
+<div class="main-component">
+  <div class="grid-component">
+    <div class="card" *ngFor="let recipe of recipes">
+      <img *ngIf="recipe.img" [src]="recipe.img" class="card-img-top" alt="Recipe image">
+      <div class="card-body">
+        <h5 class="card-title">{{recipe.title}}</h5>
+        <p class="card-description">{{recipe.description}}</p>
+        <button (click)="viewRecipe(recipe.id)" class="btn primary" type="button">View More</button>
       </div>
-      
+    </div>
+  </div>
+</div>
+
+
 </div>

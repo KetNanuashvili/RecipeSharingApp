@@ -101,37 +101,35 @@
       "image": "burger.jpg"
     },
     {
-      "id": "5ce6",
-      "name": "ჩიზბურგერი",
-      "ingredients": [
-        "ხორცი",
-        "პურის ცომი",
-        "ჩიზი"
-      ]
-    },
-    {
-      "id": "2344",
-      "name": "ჩიზბურგერი",
-      "ingredients": [
-        "ხორცი",
-        "პურის ცომი",
-        "ჩიზი"
-      ]
-    },
-    {
-      "id": "a353",
-      "title": "დდდ",
-      "description": "დდ",
+      "id": "44d7",
+      "title": "დდ",
+      "description": "დდდ",
       "ingredients": "დდდ",
       "instructions": "დდდ",
       "img": "C:\\fakepath\\111.png"
     },
     {
-      "id": "9580",
-      "title": "ფფ",
-      "description": "ფ",
-      "ingredients": "ფ",
-      "instructions": "ფ",
+      "id": "871a",
+      "title": "dd",
+      "description": "dd",
+      "ingredients": "dd",
+      "instructions": "dd",
+      "img": "C:\\fakepath\\111.png"
+    },
+    {
+      "id": "e2fa",
+      "title": "ddd",
+      "description": "ddd",
+      "ingredients": "ddd",
+      "instructions": "ddd",
+      "img": "C:\\fakepath\\111.png"
+    },
+    {
+      "id": "9ed9",
+      "title": "ფფფ",
+      "description": "ფფფ",
+      "ingredients": "ფფფ",
+      "instructions": "ფფფ",
       "img": "C:\\fakepath\\111.png"
     }
   ]
