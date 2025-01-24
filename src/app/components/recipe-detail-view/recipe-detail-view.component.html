@@ -21,7 +21,7 @@
                    <p class="card-text texts-style"> {{recipe.instructions}}</p>                    <hr>
                     </div>
                     <div style="display: flex;  justify-content: space-around; align-items: center;">
-                        <button class="btn primary"> რედაქტირება</button>
+                        <button class="btn primary" (click)="editCard()"> რედაქტირება</button>
                         <button class="btn primary primary2" (click)="deleteCard()"> წაშლა</button>
                     </div>
                 </div>

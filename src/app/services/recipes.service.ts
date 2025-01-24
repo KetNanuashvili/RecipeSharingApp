@@ -35,18 +35,23 @@ export class RecipeService {
   }
   
   addRecipe(recipe: any): Observable<any> {
-    return this.http.get<any[]>(this.apiUrl).pipe(
-      switchMap((recipes: any[]) => {
-        const nextId = this.getNextId(recipes);
-        const newRecipe = { ...recipe, id: nextId.toString() };  // ახალ რეცეპტს მიენიჭება ახალი ID
-  
-        return this.http.post<any>(this.apiUrl, newRecipe);
-      }),
-      catchError((error) => {
-        console.error('Error adding recipe', error);
-        return of(null);
-      })
-    );
+    if (recipe.id) {
+      // თუ რეცეპტს უკვე აქვს ID, ეს ნიშნავს, რომ რედაქტირება ხდება
+      return this.updateRecipe(recipe.id, recipe); // გამოიყენე updateRecipe, რათა განაახლო რეცეპტი
+    } else {
+      // თუ არ აქვს ID, შექმენი ახალი რეცეპტი
+      return this.http.get<any[]>(this.apiUrl).pipe(
+        switchMap((recipes: any[]) => {
+          const nextId = this.getNextId(recipes);
+          const newRecipe = { ...recipe, id: nextId.toString() };  // ახალ რეცეპტს მიენიჭება ახალი ID
+          return this.http.post<any>(this.apiUrl, newRecipe);
+        }),
+        catchError((error) => {
+          console.error('Error adding recipe', error);
+          return of(null);
+        })
+      );
+    }
   }
   
   

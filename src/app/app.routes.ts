@@ -7,5 +7,6 @@ export const routes: Routes = [
   { path: '', redirectTo: '/mainPage', pathMatch: 'full' },
   { path: 'mainPage', component: MainPageListOfRecipeComponent },
   { path: 'recipe/:id', component: RecipeDetailViewComponent },
-  {path: 'cardForm',component:  AddNewCardFormComponent},
+  { path: 'cardForm', component: AddNewCardFormComponent },
+  { path: 'cardForm/:id', component: AddNewCardFormComponent },
 ];

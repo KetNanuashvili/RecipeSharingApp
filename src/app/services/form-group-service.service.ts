@@ -9,6 +9,7 @@ export class FormGroupServiceService {
 
   createRecipeForm(): FormGroup {
     return this.fb.group({
+      id: new FormControl(null), 
       title: new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required]),
       ingredients: new FormControl('', [Validators.required]),

@@ -20,28 +20,8 @@
       ]
     },
     {
-      "id": "3",
-      "title": "Chocolate Cake",
-      "description": "A moist and rich chocolate cake that melts in your mouth.",
-      "ingredients": [
-        "1 cup all-purpose flour",
-        "1 cup sugar",
-        "1/2 cup cocoa powder",
-        "1 tsp baking powder",
-        "2 large eggs"
-      ],
-      "instructions": [
-        "Preheat oven to 350°F (175°C).",
-        "Mix flour, sugar, cocoa powder, and baking powder in a bowl.",
-        "Add eggs and mix until smooth.",
-        "Pour batter into a greased baking pan and bake for 30-35 minutes.",
-        "Let the cake cool before serving."
-      ],
-      "image": "burger.jpg"
-    },
-    {
       "id": "4",
-      "title": "Chocolate Cake",
+      "title": "Chocolate Cake 1900",
       "description": "A moist and rich chocolate cake that melts in your mouth.",
       "ingredients": [
         "1 cup all-purpose flour",
@@ -56,8 +36,7 @@
         "Add eggs and mix until smooth.",
         "Pour batter into a greased baking pan and bake for 30-35 minutes.",
         "Let the cake cool before serving."
-      ],
-      "image": "burger.jpg"
+      ]
     },
     {
       "id": "5",
@@ -85,6 +64,84 @@
       "description": "dddd",
       "ingredients": "ddd",
       "instructions": "ddddddd"
+    },
+    {
+      "id": "7",
+      "title": "Chocolate Cakekkk",
+      "description": "A moist and rich chocolate cake that melts in your mouth.",
+      "ingredients": [
+        "1 cup all-purpose flour",
+        "1 cup sugar",
+        "1/2 cup cocoa powder",
+        "1 tsp baking powder",
+        "2 large eggs"
+      ],
+      "instructions": [
+        "Preheat oven to 350°F (175°C).",
+        "Mix flour, sugar, cocoa powder, and baking powder in a bowl.",
+        "Add eggs and mix until smooth.",
+        "Pour batter into a greased baking pan and bake for 30-35 minutes.",
+        "Let the cake cool before serving."
+      ]
+    },
+    {
+      "id": "8",
+      "title": "ddddhsghdgsss",
+      "description": "dddd",
+      "ingredients": "ddd",
+      "instructions": "ddddddd"
+    },
+    {
+      "id": "9",
+      "title": "ddddhsghdgsss",
+      "description": "dddd",
+      "ingredients": "ddd",
+      "instructions": "ddddddd"
+    },
+    {
+      "id": "10",
+      "title": "ddddhsghdgsss",
+      "description": "dddd",
+      "ingredients": "dddგგგ",
+      "instructions": "ddddddd"
+    },
+    {
+      "id": "11",
+      "title": "Spaghetti Carbonara 1111",
+      "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+      "ingredients": [
+        "200g spaghetti",
+        "100g pancetta",
+        "2 large eggs",
+        "50g Parmesan cheese",
+        "Salt and black pepper to taste"
+      ],
+      "instructions": [
+        "Cook spaghetti in salted boiling water until al dente.",
+        "Fry pancetta until crispy in a skillet.",
+        "Beat eggs and mix with grated Parmesan cheese.",
+        "Toss hot spaghetti with pancetta and egg mixture. Season with salt and pepper.",
+        "Serve immediately with extra Parmesan cheese on top."
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Spaghetti Carbonara 190",
+      "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+      "ingredients": [
+        "200g spaghetti",
+        "100g pancetta",
+        "2 large eggs",
+        "50g Parmesan cheese",
+        "Salt and black pepper to taste"
+      ],
+      "instructions": [
+        "Cook spaghetti in salted boiling water until al dente.",
+        "Fry pancetta until crispy in a skillet.",
+        "Beat eggs and mix with grated Parmesan cheese.",
+        "Toss hot spaghetti with pancetta and egg mixture. Season with salt and pepper.",
+        "Serve immediately with extra Parmesan cheese on top."
+      ]
     }
   ]
 }

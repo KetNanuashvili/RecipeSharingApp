@@ -76,4 +76,20 @@ export class RecipeDetailViewComponent implements OnInit {
       alert('Recipe ID is not available for deletion.');
     }
   }
+
+  editRecipe(): void {
+    if (this.recipe?.id) {
+      this.router.navigate(['/cardForm', this.recipe.id]);
+    } else {
+      alert('Recipe ID not found!');
+    }
+  }
+  editCard(): void {
+    if (this.recipe?.id) {
+      this.router.navigate(['/cardForm', this.recipe.id]);
+    } else {
+      alert('Recipe ID is not available for editing.');
+    }
+  }
+  
 }
