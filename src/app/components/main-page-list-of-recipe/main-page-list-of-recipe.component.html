@@ -56,7 +56,6 @@
 <div class="main-component">
   <div class="grid-component">
     <div class="card" *ngFor="let recipe of recipes">
-      <img *ngIf="recipe.img" [src]="recipe.img" class="card-img-top" alt="Recipe image">
       <div class="card-body">
         <h5 class="card-title">{{recipe.title}}</h5>
         <p class="card-description">{{recipe.description}}</p>

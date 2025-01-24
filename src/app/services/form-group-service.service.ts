@@ -13,7 +13,6 @@ export class FormGroupServiceService {
       description: new FormControl('', [Validators.required]),
       ingredients: new FormControl('', [Validators.required]),
       instructions: new FormControl('', [Validators.required]),
-      img: new FormControl('', [Validators.required]),
     });
   }
 }

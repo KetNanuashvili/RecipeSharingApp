@@ -20,9 +20,7 @@
 :host ::ng-deep .col-md-4{
     width: 450px;
 }
-p{
-    width: 350px;
-}
+
 hr{
     color: green;
     height: 5px;

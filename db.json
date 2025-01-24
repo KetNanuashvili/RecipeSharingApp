@@ -17,8 +17,7 @@
         "Beat eggs and mix with grated Parmesan cheese.",
         "Toss hot spaghetti with pancetta and egg mixture. Season with salt and pepper.",
         "Serve immediately with extra Parmesan cheese on top."
-      ],
-      "image": "burger.jpg"
+      ]
     },
     {
       "id": "3",
@@ -97,40 +96,35 @@
         "Add eggs and mix until smooth.",
         "Pour batter into a greased baking pan and bake for 30-35 minutes.",
         "Let the cake cool before serving."
-      ],
-      "image": "burger.jpg"
+      ]
     },
     {
-      "id": "44d7",
+      "id": "7",
+      "title": "Title7",
+      "description": "Description7",
+      "ingredients": "Ingredients7",
+      "instructions": "iNSTRUCTIONS7"
+    },
+    {
+      "id": "8",
       "title": "დდ",
       "description": "დდდ",
       "ingredients": "დდდ",
-      "instructions": "დდდ",
-      "img": "C:\\fakepath\\111.png"
+      "instructions": "დდდ"
     },
     {
-      "id": "871a",
-      "title": "dd",
-      "description": "dd",
-      "ingredients": "dd",
-      "instructions": "dd",
-      "img": "C:\\fakepath\\111.png"
-    },
-    {
-      "id": "e2fa",
-      "title": "ddd",
-      "description": "ddd",
-      "ingredients": "ddd",
-      "instructions": "ddd",
-      "img": "C:\\fakepath\\111.png"
-    },
-    {
-      "id": "9ed9",
-      "title": "ფფფ",
+      "id": "9",
+      "title": "ფფ",
       "description": "ფფფ",
       "ingredients": "ფფფ",
-      "instructions": "ფფფ",
-      "img": "C:\\fakepath\\111.png"
+      "instructions": "ფფფ"
+    },
+    {
+      "id": "10",
+      "title": "ფფფ",
+      "description": "ფფფფფფფფ",
+      "ingredients": "ფფფფფფფფფფფფფფფფფფფფფ",
+      "instructions": "ფფფფფფფფფფფფფფფფფფფფფფფფფფფფფ"
     }
   ]
 }

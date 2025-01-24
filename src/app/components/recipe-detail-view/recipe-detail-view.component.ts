@@ -21,20 +21,36 @@ export class RecipeDetailViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
-      const id = Number(params.get('id'));
-      if (id) {
-        // Use the getRecipeById method to fetch the specific recipe by its ID
-        this.recipeService.getRecipeById(id).subscribe(
-          (recipe) => {
-            this.recipe = recipe;  // Set the fetched recipe to the 'recipe' property
-          },
-          (error) => {
-            console.error('Error fetching recipe data:', error);  // Handle errors
-          }
-        );
+      const id = Number(params.get('id')); // აქ 'id' ემთხვევა როუტის პარამეტრს
+      console.log('Received ID:', id);
+  
+      if (!id || isNaN(id)) {
+        console.error('Invalid ID received!');
+        alert('Invalid or missing recipe ID!');
+        this.router.navigate(['/mainPage']);
+        return;
       }
+  
+      this.recipeService.getRecipeById(id).subscribe(
+        (recipe) => {
+          console.log('Fetched Recipe:', recipe);
+          if (recipe) {
+            this.recipe = recipe;
+          } else {
+            console.error('Recipe not found!');
+            alert('Recipe not found!');
+            this.router.navigate(['/mainPage']);
+          }
+        },
+        (error) => {
+          console.error('Error fetching recipe data:', error);
+        }
+      );
     });
   }
+  
+  
+  
 
   returnMainPage(): void {
     this.router.navigate(['/mainPage']);

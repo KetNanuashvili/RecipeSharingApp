@@ -18,55 +18,30 @@ export class MainPageListOfRecipeComponent implements OnInit {
   ngOnInit(): void {
     this.getRecipes();
   }
+
   getRecipes(): void {
     this.recipeService.getRecipes().subscribe((data) => {
-      this.recipes = data.map(recipe => {
-        // თუ სურათის მისამართი არ იწყება http-ით, განახორციელეთ სწორი URL
-        if (recipe.img && !recipe.img.startsWith('http')) {
-          recipe.img = 'http://localhost:3000/recipes/' + recipe.img; // განსაზღვრული URL სერვერისთვის
-        }
-        else if (!recipe.img) {
-          recipe.img = 'http://localhost:3000/recipes/default-image.png'; // fallback სურათი
-        }
-        return recipe;
-      });
-      console.log(data); // გამოიყენეთ თუ საჭიროა დიაგნოსტიკა
+      this.recipes = data; // No need to modify the image URL anymore
+      console.log(data); // For diagnostics
     });
   }
-  
 
-  handleImageUpload(event: any, recipe: any): void {
-    const file = event.target.files[0]; // აირჩიეთ ფაილი
-    const formData = new FormData();
-    formData.append('image', file, file.name); // სურათი დამატებული ფორმაში
-  
-    this.recipeService.uploadImage(formData).subscribe(response => {
-      console.log('Image uploaded successfully:', response);
-      
-      // სურათის ახალ მისამართზე განახლება
-      recipe.img = 'http://localhost:3000/recipes/' + response.imagePath;
-    });
-  }
-  
-  
-  
-  
-
-  // Navigate to the RecipeDetailViewComponent with the selected recipe's id
   viewRecipe(id: number): void {
     this.router.navigate(['/recipe', id]);
+    console.log('Navigating to recipe with id:', id); 
+    
   }
-  
 
   addRecipe(): void {
     const newRecipe = {
-      name: 'ჩიზბურგერი',
-      ingredients: ['ხორცი', 'პურის ცომი', 'ჩიზი']
+      title: 'ჩიზბურგერი',
+      description: 'გემრიელი ჩიზბურგერი',
+      ingredients: ['ხორცი', 'პურის ცომი', 'ჩიზი'],
+      instructions: 'მზა ჩიზბურგერის რეცეპტი'
     };
 
     this.recipeService.addRecipe(newRecipe).subscribe((data) => {
       this.recipes.push(data);
-  
     });
   }
 
@@ -76,7 +51,7 @@ export class MainPageListOfRecipeComponent implements OnInit {
     });
   }
 
-  addNewRecipe(): void{
+  addNewRecipe(): void {
     this.router.navigate(['/cardForm']);
   }
 }
