@@ -55,4 +55,25 @@ export class RecipeDetailViewComponent implements OnInit {
   returnMainPage(): void {
     this.router.navigate(['/mainPage']);
   }
+
+  deleteCard(): void {
+    if (this.recipe?.id) {
+      this.recipeService.deleteRecipe(this.recipe.id).subscribe(
+        (response) => {
+          if (response) {
+            alert('Recipe deleted successfully!');
+            this.router.navigate(['/mainPage']); // Redirect to the main page after deletion
+          } else {
+            alert('Error deleting recipe.');
+          }
+        },
+        (error) => {
+          console.error('Error deleting recipe:', error);
+          alert('Error deleting recipe.');
+        }
+      );
+    } else {
+      alert('Recipe ID is not available for deletion.');
+    }
+  }
 }

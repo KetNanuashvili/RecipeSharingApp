@@ -3,7 +3,7 @@
   <div class="bottom-div" >
     <div class="bottom-header">
         <!-- left dropdown div  -->
-        <form class="dropdown-main-looking" >
+        <form class="dropdown-main-looking" [formGroup]="FilterForm">
           <div class="btn-group">
             <input class="filter-input" type="text" placeholder="Title Filter" formControlName="title">
             <span>
@@ -22,19 +22,8 @@
             </span>
           </div>
         </form>
-        
-        <!-- <div *ngFor="let recipe of filteredRecipes">
-          <div>{{ recipe.name }}</div>
-          <div>{{ recipe.ingredients.join(', ') }}</div>
-        </div> -->
-        
-        <div >
-          <div class="recipe-item">
-            <!-- <h3>{{ recipe.title }}</h3>
-            <p>{{ recipe.ingredients }}</p> -->
-          </div>
-        </div>
-    
+     
+ 
       <!-- right divs -->
          <div>
               <!-- add listing  -->

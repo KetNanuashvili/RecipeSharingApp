@@ -36,12 +36,18 @@ export class AddNewCardFormComponent implements OnInit {
   private addRecipe(recipeData: any): void {
     this.recipeService.addRecipe(recipeData).subscribe(response => {
       if (response) {
-        console.log('Recipe added successfully:', response);
+        // Show success alert
+        alert('Recipe added successfully!');
+        
+        // Close or navigate away from the card (depending on your application logic)
+        this.router.navigate(['/mainPage']); // Navigate to the main page, for example
       } else {
         console.error('Failed to add recipe');
+        alert('Failed to add recipe. Please try again.');
       }
     });
   }
+  
 
   closeNewCard(): void {
     this.router.navigate(['mainPage']);

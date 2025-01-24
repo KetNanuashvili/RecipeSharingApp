@@ -39,8 +39,7 @@ export class RecipeService {
       switchMap((recipes: any[]) => {
         const nextId = this.getNextId(recipes);
         const newRecipe = { ...recipe, id: nextId.toString() };  // ახალ რეცეპტს მიენიჭება ახალი ID
-        
-        // გამოიყენეთ `post` მოთხოვნა, რათა მონაცემები დაემატოს
+  
         return this.http.post<any>(this.apiUrl, newRecipe);
       }),
       catchError((error) => {
@@ -69,8 +68,9 @@ export class RecipeService {
     return this.http.delete<any>(`${this.apiUrl}/${id}`).pipe(
       catchError((error) => {
         console.error(`Error deleting recipe with id ${id}`, error);
-        return of(null);
+        return of(null);  // წაშლის წარუმატებლობის შემთხვევაში დაბრუნდება null
       })
     );
   }
+  
 }
