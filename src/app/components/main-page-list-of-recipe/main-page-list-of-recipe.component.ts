@@ -46,7 +46,7 @@ export class MainPageListOfRecipeComponent implements OnInit {
     this.recipeService.getRecipes().subscribe((data) => {
       this.recipes = data; 
       console.log(data);
-      this.filterItems(); //
+      // this.filterItems(); //
     });
   }
 
