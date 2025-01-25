@@ -12,6 +12,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroupServiceService } from './services/form-group-service.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { recipeReducer } from './reducer/recipe.reducer';
+import { EffectsModule } from '@ngrx/effects';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule ,
     CommonModule,
+    
+
+
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
